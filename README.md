@@ -113,7 +113,7 @@ Step 1 Pre-train the source projection network.
 ```
 <path_to_dpcl>/pretrain_ae/$ python pretrain_autoencoder.py
 ```
-Step 2 Train the segmentation network. (For example, trained on the GTAV.)
+Step 2 Fixed the source projection network. Train the segmentation network. (For example, trained on the GTAV.)
 ```
 <path_to_dpcl>/segmentation_network/$ source ./scripts/train_r50_gtav_dpcl.sh # Train: GTAV, Test: BDD100K, Cityscapes, Mapillary / ResNet50, DPCL
 ```
