@@ -117,8 +117,12 @@ Step 2 Fixed the source projection network. Train the segmentation network. (For
 ```
 <path_to_dpcl>/segmentation_network/$ source ./scripts/train_r50_gtav_dpcl.sh # Train: GTAV, Test: BDD100K, Cityscapes, Mapillary / ResNet50, DPCL
 ```
-Step 3 Test time process. (Load the path of saved snapshot by the parameter '--snapshot'. Load the center under the <path_to_dpcl>/class_center in the following files. This test process is the way evaluated in our paper.)
+Step 3 Test time process. (This test process is the way evaluated in our paper. The test process in the train file is a faster way without alter mean and var in the test process.)
 ```
+#Load the snapshot
+--snapshot = <YOUR_SNAPSHOT_PATH>
+#Load the mean var center in the following files
+center under the <path_to_dpcl>/class_center
 <path_to_dpcl>/segmentation_network/$ python test_alter_mean_var.py # DPCL. DPCL wo TTA.
 <path_to_dpcl>/segmentation_network/$ python test_iter_contrast.py # DPCL+TTA (C). Only iterate pixel-to-pixel contrastive loss in the test time.
 <path_to_dpcl>/segmentation_network/$ python test_iter_contrast_entropy.py # DPCL+TTA (C+E). Iterate pixel-to-pixel contrastive and entropy loss in the test time.
