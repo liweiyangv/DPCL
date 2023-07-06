@@ -1,7 +1,7 @@
 ## DPCL (AAAI 2023 Oral): Official Project Webpage
 This repository provides the official PyTorch implementation of the following paper:
 > Generalized Semantic Segmentation by Self-Supervised Source Domain Projection and Multi-Level Contrastive Learning <br>
-> liwei Yang* (Xi’an Jiaotong University), XiangGu* (Xi’an Jiaotong University), JianSun (Xi’an Jiaotong University, Pazhou Laboratory (Huangpu) and Peng Cheng Laboratory.) (*: equal contribution)<br>
+> Liwei Yang* (Xi’an Jiaotong University), XiangGu* (Xi’an Jiaotong University), JianSun (Xi’an Jiaotong University, Pazhou Laboratory (Huangpu) and Peng Cheng Laboratory.) (*: equal contribution)<br>
 > AAAI 2023, Accepted as Oral Presentation<br>
 
 
