@@ -1,6 +1,10 @@
-# Generalized Semantic Segmentation by Self-Supervised Source Domain Projection and Multi-Level Contrastive Learning (DPCL), AAAI 2023 (Oral Presentation) 
-Domain Generalization Semantic Segmentation
-
+## DPCL (AAAI 2023 Oral): Official Project Webpage
+This repository provides the official PyTorch implementation of the following paper:
+> Generalized Semantic Segmentation by Self-Supervised Source Domain Projection and Multi-Level Contrastive Learning <br>
+> liwei Yang* (Xi’an Jiaotong University), XiangGu* (Xi’an Jiaotong University), JianSun (Xi’an Jiaotong University, Pazhou Laboratory (Huangpu) and Peng Cheng Laboratory.) (*: equal contribution)<br>
+> AAAI 2023, Accepted as Oral Presentation<br>
+> **Abstract:** 
+*Deep networks trained on the source domain show degraded performance when tested on unseen target domain data. To enhance the model's generalization ability, most existing domain generalization methods learn domain invariant features by suppressing domain sensitive features. Different from them, we propose a Domain Projection and Contrastive Learning (DPCL) approach for generalized semantic segmentation, which includes two modules: Self-supervised Source Domain Projection (SSDP) and Multi-level Contrastive Learning (MLCL). SSDP aims to reduce domain gap by projecting data to the source domain, while MLCL is a learning scheme to learn discriminative and generalizable features on the projected data. During test time, we first project the target data by SSDP to mitigate domain shift, then generate the segmentation results by the learned segmentation network based on MLCL. At test time, we can update the projected data by minimizing our proposed pixel-to-pixel contrastive loss to obtain better results. Extensive experiments for semantic segmentation demonstrate the favorable generalization capability of our method on benchmark datasets.*<br>
 <img src="./dpcl_framework.png"></img>
 
 ## DPCL - Pytorch
