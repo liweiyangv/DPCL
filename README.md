@@ -99,16 +99,23 @@ __C.DATASET.BDD_DIR = <YOUR_BDD_PATH>
 #Synthia Dataset Dir Location
 __C.DATASET.SYNTHIA_DIR = <YOUR_SYNTHIA_PATH>
 ```
-```
+
 3. You can train DPCL with following commands.
 
-### Step 1 pre-train the source projection network
+Step 1 Pre-train the source projection network.
 ```
 <path_to_dpcl>/pretrain_ae/$ python pretrain_autoencoder.py
 ```
-### Step 2 train the segmentation network
+Step 2 Train the segmentation network.
 ```
 <path_to_dpcl>/segmentation_network/$ source ./scripts/train_r50_gtav_dpcl.sh # Train: GTAV, Test: BDD100K, Cityscapes, Mapillary / ResNet50, DPCL
+```
+Step 3 Test time process. (Load the center in the <path_to_dpcl>/class_center in the following files. This test process is the way evaluated in our paper.)
+```
+<path_to_dpcl>/segmentation_network/$ python test_alter_mean_var.py # DPCL. DPCL wo TTA.
+<path_to_dpcl>/segmentation_network/$ python test_iter_contrast.py # DPCL+TTA (C). Only iterate pixel-to-pixel contrastive loss in the test time.
+<path_to_dpcl>/segmentation_network/$ python test_iter_contrast_entropy.py # DPCL+TTA (C+E). Iterate pixel-to-pixel contrastive and entropy loss in the test time.
+
 ```
 ### Pretrained Models
 You can download the pretrained source projection network evaluated in our paper at [Google Drive](https://drive.google.com/drive/folders/1gEthHAKqhEczRWlonVaOTExszOMyg7ju). Please put the pretrained source projection model in the folder <path_to_dpcl>/pretrain_ae/
@@ -123,7 +130,7 @@ If you use DPCL in your research or wish to refer to the baseline results publis
   journal={AAAI},
   year={2023}
 }
-
+```
 ## Questions for code
 If you meet any questions of our code or paper. Please send email to yangliwei@stu.xjtu.edu.cn at any time. 
 
