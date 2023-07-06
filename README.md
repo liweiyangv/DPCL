@@ -1,13 +1,13 @@
-# DPCL 
+# Generalized Semantic Segmentation by Self-Supervised Source Domain Projection and Multi-Level Contrastive Learning (DPCL), AAAI 2023 (Oral Presentation) 
 Domain Generalization Semantic Segmentation
 
 <img src="./dpcl_framework.png"></img>
 
 ## DPCL - Pytorch
 
-Implementation of <a href="https://doi.org/10.1609/aaai.v37i9.26280">DPCL</a>, domain generalized network for segmentation, in Pytorch. The full paper can be found in <a href="https://arxiv.org/abs/2303.01906">
+Implementation of <a href="https://doi.org/10.1609/aaai.v37i9.26280">DPCL</a>, domain generalized network for segmentation, in Pytorch. The full paper can be found in <a href="https://arxiv.org/abs/2303.01906">this</a>
 
-### How to Run RobustNet
+### How to Run DPCL
 We evaludated DPCL on [Cityscapes](https://www.cityscapes-dataset.com/), [BDD-100K](https://bair.berkeley.edu/blog/2018/05/30/bdd/),[Synthia](https://synthia-dataset.net/downloads/) ([SYNTHIA-RAND-CITYSCAPES](http://synthia-dataset.net/download/808/)), [GTAV](https://download.visinf.tu-darmstadt.de/data/from_games/) and [Mapillary Vistas](https://www.mapillary.com/dataset/vistas?pKey=2ix3yvnjy9fwqdzwum3t9g&lat=20&lng=0&z=1.5).
 
 We adopt Class uniform sampling proposed in [this paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhu_Improving_Semantic_Segmentation_via_Video_Propagation_and_Label_Relaxation_CVPR_2019_paper.pdf) to handle class imbalance problems. [GTAVUniform](https://github.com/shachoi/RobustNet/blob/0538c69954c030273b3df952f90347572ecac53b/datasets/gtav.py#L306) and [CityscapesUniform](https://github.com/shachoi/RobustNet/blob/0538c69954c030273b3df952f90347572ecac53b/datasets/cityscapes.py#L324) are the datasets to which Class Uniform Sampling is applied.
