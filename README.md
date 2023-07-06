@@ -113,11 +113,11 @@ Step 1 Pre-train the source projection network.
 ```
 <path_to_dpcl>/pretrain_ae/$ python pretrain_autoencoder.py
 ```
-Step 2 Train the segmentation network.
+Step 2 Train the segmentation network. (For example, trained on the GTAV.)
 ```
 <path_to_dpcl>/segmentation_network/$ source ./scripts/train_r50_gtav_dpcl.sh # Train: GTAV, Test: BDD100K, Cityscapes, Mapillary / ResNet50, DPCL
 ```
-Step 3 Test time process. (Load the center in the <path_to_dpcl>/class_center in the following files and send the path of saved snapshot to the parameter '--snapshot'. This test process is the way evaluated in our paper.)
+Step 3 Test time process. (Load the path of saved snapshot by the parameter '--snapshot'. Load the center under the <path_to_dpcl>/class_center in the following files. This test process is the way evaluated in our paper.)
 ```
 <path_to_dpcl>/segmentation_network/$ python test_alter_mean_var.py # DPCL. DPCL wo TTA.
 <path_to_dpcl>/segmentation_network/$ python test_iter_contrast.py # DPCL+TTA (C). Only iterate pixel-to-pixel contrastive loss in the test time.
