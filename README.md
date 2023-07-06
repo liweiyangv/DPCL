@@ -103,10 +103,11 @@ __C.DATASET.SYNTHIA_DIR = <YOUR_SYNTHIA_PATH>
 3. You can train DPCL with following commands.
 ```
 Step 1 pre-train the source projection network
+```
 <path_to_dpcl>/pretrain_ae python pretrain_autoencoder.py
 ```
-```
 Step 2 train the segmentation network
+```
 <path_to_dpcl>/segmentation_network/$ source ./scripts/train_r50_gtav_dpcl.sh # Train: GTAV, Test: BDD100K, Cityscapes, Mapillary / ResNet50, DPCL
 ```
 ### Pretrained Models
