@@ -101,20 +101,18 @@ __C.DATASET.SYNTHIA_DIR = <YOUR_SYNTHIA_PATH>
 ```
 ```
 3. You can train DPCL with following commands.
+
+### Step 1 pre-train the source projection network
 ```
-Step 1 pre-train the source projection network
+<path_to_dpcl>/pretrain_ae/$ python pretrain_autoencoder.py
 ```
-<path_to_dpcl>/pretrain_ae python pretrain_autoencoder.py
-```
-Step 2 train the segmentation network
+### Step 2 train the segmentation network
 ```
 <path_to_dpcl>/segmentation_network/$ source ./scripts/train_r50_gtav_dpcl.sh # Train: GTAV, Test: BDD100K, Cityscapes, Mapillary / ResNet50, DPCL
 ```
 ### Pretrained Models
 You can download the pretrained source projection network evaluated in our paper at [Google Drive](https://drive.google.com/drive/folders/1gEthHAKqhEczRWlonVaOTExszOMyg7ju). Please put the pretrained source projection model in the folder <path_to_dpcl>/pretrain_ae/
 
-
-step 1 pretrain the self-supervised source domain projection network by run the code python pretrain_autoencoder.py in folder pretrain_ae
 
 If you use DPCL in your research or wish to refer to the baseline results published in our paper, please use the following BibTeX entry.
 
