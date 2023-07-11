@@ -126,8 +126,7 @@ parser.add_argument('--scale_max', type=float, default=2.0,
                     help='dynamically scale training images up to this size')
 parser.add_argument('--weight_decay', type=float, default=5e-4)
 parser.add_argument('--momentum', type=float, default=0.9)
-# parser.add_argument('--snapshot', type=str, default='/media/SuperHisk/yangliwei/experiment_data/fixed_point/splitted/snapshots/best/gtav/resnet50/best_total.pth')
-parser.add_argument('--snapshot', type=str, default='./logs/ckpt/2022_8_1_619/hard_pixel_new_pixel_contrast_instance_triplet_orthometric_mobilenet_bs8_le_2_40000_v14/08_01_09/last_None_epoch_25_mean-iu_0.00000.pth')
+parser.add_argument('--snapshot', type=str, default=None)
 
 
 parser.add_argument('--restore_optimizer', action='store_true', default=False)
