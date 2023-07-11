@@ -475,7 +475,7 @@ def main():
             #torch.save(scheduler.state_dict(), osp.join(args.snapshot_dir, 'scheduler_epoch_' + str(epoch) + '.pth'))
             #torch.save(optim.state_dict(), osp.join(args.snapshot_dir, 'optim_epoch_' + str(epoch) + '.pth'))
             #torch.save(class_prototype, osp.join(args.snapshot_dir, 'class_prototype_epoch_' + str(epoch) + '.pt'))
-        if epoch % 2 ==0:
+        if epoch % 1 ==0:
             for dataset, val_loader in extra_val_loaders.items():
                 print("Extra validating... This won't save pth file")
                 validate(val_loader, dataset, net, criterion_val, optim, scheduler, epoch, writer, i, model_transfer,
