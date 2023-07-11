@@ -129,7 +129,7 @@ parser.add_argument('--scale_max', type=float, default=2.0,
                     help='dynamically scale training images up to this size')
 parser.add_argument('--weight_decay', type=float, default=5e-4)
 parser.add_argument('--momentum', type=float, default=0.9)
-parser.add_argument('--snapshot', type=str, default='/media/yangliwei/lemon/fixed_point/snapshots/GTAV_BEST/res50/best-total.pth')
+parser.add_argument('--snapshot', type=str, default=None)
 parser.add_argument('--restore_optimizer', action='store_true', default=False)
 
 
