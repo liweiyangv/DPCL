@@ -272,7 +272,6 @@ def random_select_half_hard_pixel(feature_clone_2,easy_index,hard_index,select_n
     hard_num = torch.sum(hard_index)
     easy_num = torch.sum(easy_index)
     hard_pixel_prop = float(hard_pixel_prop)
-    print('hard_pixel_prop',hard_pixel_prop)
     hard_prop = hard_pixel_prop
     easy_prop = 1-hard_pixel_prop
     hard_prop_num = int(select_num*hard_prop)
@@ -677,7 +676,7 @@ def train(train_loader, net, model_transfer, optim, optimizer_transfer, curr_epo
 
                 # instance_pic_memory_contrastive_loss = supervised_instance_pic_memory_hierarchical_loss(instance_protoype,pic_prototype,prototype_normalize,prototype_temp)
                 instance_pic_memory_contrastive_loss = instance_triplet_loss(instance_protoype, prototype_normalize, args.marginal_param)
-                print(args.marginal_param,args.moving_param)
+            
                 #feature = feature.transpose(1,0)
                 b, c, w, h = feature.shape
 
