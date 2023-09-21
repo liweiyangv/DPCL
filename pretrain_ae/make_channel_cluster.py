@@ -22,7 +22,8 @@ from model.deeplab import Deeplab_Single
 # from new_autoencoder import AutoEncoder
 from autoencoder.cyc_autoencoder import AutoEncoder
 from utils.loss import CrossEntropy2d
-from dataset.gtav_new_normalize import GTA5DataSet
+# from dataset.gtav_new_normalize import GTA5DataSet
+from dataset.gtav_new_normalize_withiswprocess_nolabel import GTA5DataSet
 import time
 import torchvision
 
@@ -170,7 +171,7 @@ def main():
         os.makedirs(args.visual_result)
 
     trainloader = data.DataLoader(
-        GTAV_IOU(args.data_dir, args.data_list, crop_size=input_size, scale=False,
+        GTA5DataSet(args.data_dir, args.data_list, crop_size=input_size, scale=False,
                           mirror=False, set=args.set), batch_size=1, shuffle=False, pin_memory=True)
     print(len(trainloader))
     trainloader_iter = enumerate(trainloader)
